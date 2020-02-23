@@ -1,8 +1,9 @@
 //
 //  FeedViewController.swift
-//  
+//  Parstagram
 //
 //  Created by Paola Camacho on 2/22/20.
+//  Copyright © 2020 Paola Camacho. All rights reserved.
 //
 
 import UIKit
