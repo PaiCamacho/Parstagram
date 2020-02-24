@@ -86,10 +86,67 @@
                     <view key="view" contentMode="scaleToFill" id="kDB-KH-1sg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-Z1-dYR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post Cell" rowHeight="497" id="hz2-65-hPZ" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="497"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hz2-65-hPZ" id="TSD-2w-dEd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-mm-a1O">
+                                                    <rect key="frame" x="11" y="11" width="395" height="412"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hCV-mm-a1O" secondAttribute="height" multiplier="395:412" id="EMr-z5-KeC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-c7-pjf">
+                                                    <rect key="frame" x="8" y="431" width="29" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nice day today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-2w-1WT">
+                                                    <rect key="frame" x="45" y="431" width="119" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="OtY-2w-1WT" secondAttribute="bottom" constant="8" id="0AQ-wt-9aT"/>
+                                                <constraint firstItem="hCV-mm-a1O" firstAttribute="leading" secondItem="TSD-2w-dEd" secondAttribute="leading" constant="8" id="Z4G-YK-b9R"/>
+                                                <constraint firstItem="hCV-mm-a1O" firstAttribute="top" secondItem="TSD-2w-dEd" secondAttribute="top" constant="8" id="qwH-Oq-VLG"/>
+                                                <constraint firstItem="1wo-c7-pjf" firstAttribute="leading" secondItem="TSD-2w-dEd" secondAttribute="leading" constant="8" id="rwD-wh-YZD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="OtY-2w-1WT" id="8Wj-bh-2Nl"/>
+                                            <outlet property="photoView" destination="hCV-mm-a1O" id="bHk-XF-Ua6"/>
+                                            <outlet property="usernameLabel" destination="1wo-c7-pjf" id="5ip-P7-OKF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yJi-45-GkZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="S9r-7e-JRx"/>
+                    <navigationItem key="navigationItem" id="S9r-7e-JRx">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="J1a-cd-VEP">
+                            <connections>
+                                <segue destination="yi2-9C-KEy" kind="presentation" id="Efh-EX-Yr8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="tbE-Z1-dYR" id="hbY-MQ-Ygh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESl-tM-xjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,8 +170,60 @@
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="137.94642857142856"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="5mi-Tv-IC1">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="yi2-9C-KEy" customClass="CameraViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cti-Sr-6IN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="yJc-Sj-5cf">
+                                <rect key="frame" x="20" y="74" width="374" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wvu-Pe-4Yy" appends="YES" id="HTS-bB-FBl"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0tJ-fG-wNc">
+                                <rect key="frame" x="20" y="454" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGA-h2-rD6">
+                                <rect key="frame" x="20" y="523" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="yi2-9C-KEy" eventType="touchUpInside" id="UBD-bK-dKK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oLo-nT-uiX"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="0tJ-fG-wNc" id="u3W-hg-qZF"/>
+                        <outlet property="imageView" destination="yJc-Sj-5cf" id="O3C-Lg-q8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQG-CV-DiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wvu-Pe-4Yy">
+                    <connections>
+                        <action selector="onCameraButton:" destination="yi2-9C-KEy" id="tyx-pS-UzJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2760.8695652173915" y="137.94642857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="image_placeholder" width="375" height="375"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
     </resources>
 </document>
