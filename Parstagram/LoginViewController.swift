@@ -36,7 +36,6 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onSignUp(_ sender: Any) {
-        PFUser.registerSubclass()
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text

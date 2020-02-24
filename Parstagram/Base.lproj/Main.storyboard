@@ -92,37 +92,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Post Cell" rowHeight="497" id="hz2-65-hPZ" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="497"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="474" id="hz2-65-hPZ" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="474"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hz2-65-hPZ" id="TSD-2w-dEd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="474"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-mm-a1O">
-                                                    <rect key="frame" x="11" y="11" width="395" height="412"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-mm-a1O">
+                                                    <rect key="frame" x="8" y="8" width="395" height="412"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="hCV-mm-a1O" secondAttribute="height" multiplier="395:412" id="EMr-z5-KeC"/>
+                                                        <constraint firstAttribute="width" secondItem="hCV-mm-a1O" secondAttribute="height" multiplier="395:412" id="2D0-qn-NLa"/>
+                                                        <constraint firstAttribute="height" constant="412" id="duM-Bf-cIg"/>
+                                                        <constraint firstAttribute="width" constant="395" id="v5A-cX-dxV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-c7-pjf">
-                                                    <rect key="frame" x="8" y="431" width="29" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-c7-pjf">
+                                                    <rect key="frame" x="8" y="428" width="29" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nice day today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-2w-1WT">
-                                                    <rect key="frame" x="45" y="431" width="119" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice day today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-2w-1WT">
+                                                    <rect key="frame" x="45" y="428" width="119" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="OtY-2w-1WT" secondAttribute="bottom" constant="8" id="0AQ-wt-9aT"/>
-                                                <constraint firstItem="hCV-mm-a1O" firstAttribute="leading" secondItem="TSD-2w-dEd" secondAttribute="leading" constant="8" id="Z4G-YK-b9R"/>
-                                                <constraint firstItem="hCV-mm-a1O" firstAttribute="top" secondItem="TSD-2w-dEd" secondAttribute="top" constant="8" id="qwH-Oq-VLG"/>
-                                                <constraint firstItem="1wo-c7-pjf" firstAttribute="leading" secondItem="TSD-2w-dEd" secondAttribute="leading" constant="8" id="rwD-wh-YZD"/>
+                                                <constraint firstItem="hCV-mm-a1O" firstAttribute="leading" secondItem="TSD-2w-dEd" secondAttribute="leading" constant="8" id="3Du-50-dkg"/>
+                                                <constraint firstAttribute="bottom" secondItem="OtY-2w-1WT" secondAttribute="bottom" constant="8" id="AV9-J0-rn9"/>
+                                                <constraint firstItem="1wo-c7-pjf" firstAttribute="top" secondItem="hCV-mm-a1O" secondAttribute="bottom" constant="8" id="IIF-At-c5Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="hCV-mm-a1O" secondAttribute="trailing" constant="8" id="JPw-gO-cR3"/>
+                                                <constraint firstAttribute="bottom" secondItem="1wo-c7-pjf" secondAttribute="bottom" constant="8" id="Jfs-iJ-fpV"/>
+                                                <constraint firstItem="OtY-2w-1WT" firstAttribute="leading" secondItem="1wo-c7-pjf" secondAttribute="trailing" constant="8" id="MrF-iU-f23"/>
+                                                <constraint firstItem="1wo-c7-pjf" firstAttribute="top" secondItem="hCV-mm-a1O" secondAttribute="bottom" constant="8" id="Tob-v7-4Gf"/>
+                                                <constraint firstItem="hCV-mm-a1O" firstAttribute="top" secondItem="TSD-2w-dEd" secondAttribute="top" constant="8" id="f10-nv-uyP"/>
+                                                <constraint firstItem="1wo-c7-pjf" firstAttribute="leading" secondItem="TSD-2w-dEd" secondAttribute="leading" constant="8" id="hEp-TX-LEe"/>
+                                                <constraint firstItem="OtY-2w-1WT" firstAttribute="top" secondItem="hCV-mm-a1O" secondAttribute="bottom" constant="8" id="kzB-Gc-tSl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
